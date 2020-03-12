@@ -129,9 +129,12 @@ wpas wpa[] = {
 
 // Define the name of the accesspoint if the gateway is in accesspoint mode (is
 // getting WiFi SSID and password using WiFiManager)
-#define AP_NAME "ESP8266-Gway-Things4U"
-#define AP_PASSWD "ttnAutoPw"
-
+#if !defined AP_NAME
+#	define AP_NAME "ESP8266-Gway-Things4U"
+#endif
+#if !defined AP_PASSWD
+#	define AP_PASSWD "ttnAutoPw"
+#endif
 
 
 // For asserting and testing the following defines are used.

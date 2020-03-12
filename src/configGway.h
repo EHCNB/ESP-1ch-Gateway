@@ -236,13 +236,24 @@
 
 
 // Gateway Ident definitions. Where is the gateway located?
-#define _DESCRIPTION "ESP Gateway"			// Name of the gateway
-#define _EMAIL "mw12554@hotmail.com"		// Owner
-#define _PLATFORM "ESP8266"
-#define _LAT 52.237367
-#define _LON 5.978654
-#define _ALT 14								// Altitude
-
+#if !defined _DESCRIPTION
+#   define _DESCRIPTION "ESP Gateway"			// Name of the gateway
+#endif
+#if !defined _EMAIL
+#   define _EMAIL "mw12554@hotmail.com"		// Owner
+#endif
+#if !defined _PLATFORM
+#   define _PLATFORM "ESP8266"
+#endif
+#if !defined _LAT
+#   define _LAT 52.237367
+#endif
+#if !defined _LON
+#   define _LON 5.978654
+#endif
+#if !defined _ALT
+#   define _ALT 14								// Altitude
+#endif
 
 // ntp
 // Please add daylight saving time to NTP_TIMEZONES when desired
